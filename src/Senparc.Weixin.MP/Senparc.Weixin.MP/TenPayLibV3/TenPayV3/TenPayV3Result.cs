@@ -80,10 +80,7 @@ namespace Senparc.Weixin.MP.TenPayLibV3
         {
             _resultXml = XDocument.Parse(resultXml);
             return_code = GetXmlValue("return_code"); // res.Element("xml").Element
-            if (!IsReturnCodeSuccess())
-            {
-                return_msg = GetXmlValue("return_msg"); // res.Element("xml").Element
-            }
+            return_msg = GetXmlValue("return_msg"); // res.Element("xml").Element
         }
 
         /// <summary>
